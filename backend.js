@@ -3,12 +3,14 @@ document.addEventListener("DOMContentLoaded", function() {
     const mensaje = document.getElementById("mensaje");
     const lista = document.getElementById("listaAprendices");
 
-    let aprendices = [
-        { nombre: "Juan Guerrero", correo: "amadeusbase8@gmail.com", ficha: "228118" }
-    ];
+    let aprendices = [];
 
     function renderizarLista() {
         lista.innerHTML = "";
+        if (aprendices.length === 0) {
+            lista.innerHTML = "<p style=\"color: #888; font-size: 0.9rem;\">No hay aprendices registrados aún.</p>";
+            return;
+        }
         aprendices.forEach(function(ap) {
             const li = document.createElement("li");
             li.innerHTML = `<strong>${ap.nombre}</strong> - ${ap.correo} <br><small>Ficha: ${ap.ficha}</small>`;
