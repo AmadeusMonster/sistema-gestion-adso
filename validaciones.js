@@ -1,1 +1,3 @@
-function validarCorreo(correo) { return correo.endsWith("@sena.edu.co"); }
+function validarCorreoSENA(correo) {
+    return correo.trim().toLowerCase().endsWith("@sena.edu.co");
+}

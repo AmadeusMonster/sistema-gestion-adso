@@ -1,1 +1,120 @@
-body { font-family: Arial, sans-serif; background-color: #39a900; color: white; }
+:root {
+    --verde-sena: #39A900;
+    --azul-sena: #00324D;
+    --gris-fondo: #f4f7f6;
+    --blanco: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+    background-color: var(--gris-fondo);
+    color: #333;
+}
+
+.navbar {
+    background-color: var(--azul-sena);
+    color: var(--blanco);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 4px solid var(--verde-sena);
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card {
+    background: var(--blanco);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.card h2 {
+    color: var(--azul-sena);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    border-bottom: 2px solid var(--gris-fondo);
+    padding-bottom: 0.5rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95rem;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--verde-sena);
+}
+
+.btn-sena {
+    width: 100%;
+    background-color: var(--verde-sena);
+    color: var(--blanco);
+    border: none;
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-sena:hover {
+    background-color: #2d8500;
+}
+
+.mensaje {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.aprendices-list {
+    list-style: none;
+}
+
+.aprendices-list li {
+    padding: 0.6rem;
+    border-bottom: 1px solid #eee;
+    font-size: 0.9rem;
+}

@@ -1,1 +1,45 @@
-<!DOCTYPE html><html><head><title>ADSO SENA</title><link rel="stylesheet" href="style.css"></head><body><h1>Registro de Aprendices</h1></body></html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestión ADSO - SENA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">SENA | ADSO</div>
+        <span>Control de Aprendices</span>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>Registro de Aprendices</h2>
+            <form id="registroForm">
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo:</label>
+                    <input type="text" id="nombre" placeholder="Ej. Juan Guerrero" required>
+                </div>
+                <div class="form-group">
+                    <label for="correo">Correo Institucional:</label>
+                    <input type="email" id="correo" placeholder="ejemplo@sena.edu.co" required>
+                </div>
+                <div class="form-group">
+                    <label for="ficha">Ficha de Formación:</label>
+                    <input type="text" id="ficha" placeholder="Ej. 228118" required>
+                </div>
+                <button type="submit" class="btn-sena">Registrar Aprendiz</button>
+            </form>
+            <p id="mensaje" class="mensaje"></p>
+        </section>
+
+        <section class="card">
+            <h2>Listado de Aprendices Matriculados</h2>
+            <ul id="listaAprendices" class="aprendices-list"></ul>
+        </section>
+    </main>
+
+    <script src="validaciones.js"></script>
+    <script src="backend.js"></script>
+</body>
+</html>
